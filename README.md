@@ -47,6 +47,7 @@ Use iOS devices as game controller for PC via usb-lighting cable.
 
 ## Thanks to
 
-- usbmuxd python client, work from Hector Martin(https://github.com/marcan)
-- Python api for virtual controller, work from Yann Bouteiller(https://github.com/yannbouteiller)
+- usbmuxd python client, work from Hector Martin (https://github.com/marcan)
+- BlueSocket, work from Kitura (https://github.com/Kitura)
+- Python api for virtual controller, work from Yann Bouteiller (https://github.com/yannbouteiller)
 
