@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A91DE2DB273FA58D00C5A337 /* backgroundTouchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DE2DA273FA58C00C5A337 /* backgroundTouchableView.swift */; };
+		A91DE2DD2740F5F700C5A337 /* steeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91DE2DC2740F5F700C5A337 /* steeringView.swift */; };
+		A984359D273B8D53009ED459 /* XpadIOSClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A984359C273B8D53009ED459 /* XpadIOSClientApp.swift */; };
+		A984359F273B8D53009ED459 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A984359E273B8D53009ED459 /* ContentView.swift */; };
+		A98435A1273B8D54009ED459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98435A0273B8D54009ED459 /* Assets.xcassets */; };
+		A98435A4273B8D54009ED459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98435A3273B8D54009ED459 /* Preview Assets.xcassets */; };
+		A98435AE273B8D54009ED459 /* GameControllerIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98435AD273B8D54009ED459 /* GameControllerIOSTests.swift */; };
+		A98435B8273B8D54009ED459 /* GameControllerIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98435B7273B8D54009ED459 /* GameControllerIOSUITests.swift */; };
+		A98435BA273B8D54009ED459 /* GameControllerIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98435B9273B8D54009ED459 /* GameControllerIOSUITestsLaunchTests.swift */; };
+		A9F4EEA2273E2E82001AA5F3 /* dpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4EEA1273E2E82001AA5F3 /* dpadView.swift */; };
+		AE4A665C1EE0F0451B85671D /* Pods_XpadIOSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98E1A3AB311BB80FB4B59C5 /* Pods_XpadIOSClient.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A98435AA273B8D54009ED459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9843591273B8D53009ED459 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9843598273B8D53009ED459;
+			remoteInfo = GameControllerIOS;
+		};
+		A98435B4273B8D54009ED459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9843591273B8D53009ED459 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9843598273B8D53009ED459;
+			remoteInfo = GameControllerIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FA479CDDB36E16E907D0CC9 /* Pods-XpadIOSClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XpadIOSClient.release.xcconfig"; path = "Target Support Files/Pods-XpadIOSClient/Pods-XpadIOSClient.release.xcconfig"; sourceTree = "<group>"; };
+		5029F5C010A9B4B342DFE149 /* Pods-XpadIOSClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XpadIOSClient.debug.xcconfig"; path = "Target Support Files/Pods-XpadIOSClient/Pods-XpadIOSClient.debug.xcconfig"; sourceTree = "<group>"; };
+		A91DE2DA273FA58C00C5A337 /* backgroundTouchableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundTouchableView.swift; sourceTree = "<group>"; };
+		A91DE2DC2740F5F700C5A337 /* steeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = steeringView.swift; sourceTree = "<group>"; };
+		A9843599273B8D53009ED459 /* XpadIOSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XpadIOSClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A984359C273B8D53009ED459 /* XpadIOSClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XpadIOSClientApp.swift; sourceTree = "<group>"; };
+		A984359E273B8D53009ED459 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A98435A0273B8D54009ED459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A98435A3273B8D54009ED459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A98435A9273B8D54009ED459 /* XpadIOSClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XpadIOSClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98435AD273B8D54009ED459 /* GameControllerIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerIOSTests.swift; sourceTree = "<group>"; };
+		A98435B3273B8D54009ED459 /* XpadIOSClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XpadIOSClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98435B7273B8D54009ED459 /* GameControllerIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerIOSUITests.swift; sourceTree = "<group>"; };
+		A98435B9273B8D54009ED459 /* GameControllerIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A9F4EEA1273E2E82001AA5F3 /* dpadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dpadView.swift; sourceTree = "<group>"; };
+		C98E1A3AB311BB80FB4B59C5 /* Pods_XpadIOSClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XpadIOSClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9843596273B8D53009ED459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE4A665C1EE0F0451B85671D /* Pods_XpadIOSClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98435A6273B8D54009ED459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98435B0273B8D54009ED459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9843590273B8D53009ED459 = {
+			isa = PBXGroup;
+			children = (
+				A984359B273B8D53009ED459 /* XpadIOSClient */,
+				A98435AC273B8D54009ED459 /* XpadIOSClientTests */,
+				A98435B6273B8D54009ED459 /* XpadIOSClientUITests */,
+				A984359A273B8D53009ED459 /* Products */,
+				C1C13AF2AD38B83B21E08AF3 /* Pods */,
+				DBA57966345689828D7A72EB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A984359A273B8D53009ED459 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9843599273B8D53009ED459 /* XpadIOSClient.app */,
+				A98435A9273B8D54009ED459 /* XpadIOSClientTests.xctest */,
+				A98435B3273B8D54009ED459 /* XpadIOSClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A984359B273B8D53009ED459 /* XpadIOSClient */ = {
+			isa = PBXGroup;
+			children = (
+				A91DE2DA273FA58C00C5A337 /* backgroundTouchableView.swift */,
+				A984359C273B8D53009ED459 /* XpadIOSClientApp.swift */,
+				A91DE2DC2740F5F700C5A337 /* steeringView.swift */,
+				A9F4EEA1273E2E82001AA5F3 /* dpadView.swift */,
+				A984359E273B8D53009ED459 /* ContentView.swift */,
+				A98435A0273B8D54009ED459 /* Assets.xcassets */,
+				A98435A2273B8D54009ED459 /* Preview Content */,
+			);
+			path = XpadIOSClient;
+			sourceTree = "<group>";
+		};
+		A98435A2273B8D54009ED459 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A98435A3273B8D54009ED459 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A98435AC273B8D54009ED459 /* XpadIOSClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				A98435AD273B8D54009ED459 /* GameControllerIOSTests.swift */,
+			);
+			path = XpadIOSClientTests;
+			sourceTree = "<group>";
+		};
+		A98435B6273B8D54009ED459 /* XpadIOSClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A98435B7273B8D54009ED459 /* GameControllerIOSUITests.swift */,
+				A98435B9273B8D54009ED459 /* GameControllerIOSUITestsLaunchTests.swift */,
+			);
+			path = XpadIOSClientUITests;
+			sourceTree = "<group>";
+		};
+		C1C13AF2AD38B83B21E08AF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5029F5C010A9B4B342DFE149 /* Pods-XpadIOSClient.debug.xcconfig */,
+				3FA479CDDB36E16E907D0CC9 /* Pods-XpadIOSClient.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DBA57966345689828D7A72EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C98E1A3AB311BB80FB4B59C5 /* Pods_XpadIOSClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9843598273B8D53009ED459 /* XpadIOSClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98435BD273B8D54009ED459 /* Build configuration list for PBXNativeTarget "XpadIOSClient" */;
+			buildPhases = (
+				65D6FE500B1925FA4D713DAD /* [CP] Check Pods Manifest.lock */,
+				A9843595273B8D53009ED459 /* Sources */,
+				A9843596273B8D53009ED459 /* Frameworks */,
+				A9843597273B8D53009ED459 /* Resources */,
+				DE4C1408D93AB340D28BAB91 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XpadIOSClient;
+			productName = GameControllerIOS;
+			productReference = A9843599273B8D53009ED459 /* XpadIOSClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A98435A8273B8D54009ED459 /* XpadIOSClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98435C0273B8D54009ED459 /* Build configuration list for PBXNativeTarget "XpadIOSClientTests" */;
+			buildPhases = (
+				A98435A5273B8D54009ED459 /* Sources */,
+				A98435A6273B8D54009ED459 /* Frameworks */,
+				A98435A7273B8D54009ED459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98435AB273B8D54009ED459 /* PBXTargetDependency */,
+			);
+			name = XpadIOSClientTests;
+			productName = GameControllerIOSTests;
+			productReference = A98435A9273B8D54009ED459 /* XpadIOSClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A98435B2273B8D54009ED459 /* XpadIOSClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98435C3273B8D54009ED459 /* Build configuration list for PBXNativeTarget "XpadIOSClientUITests" */;
+			buildPhases = (
+				A98435AF273B8D54009ED459 /* Sources */,
+				A98435B0273B8D54009ED459 /* Frameworks */,
+				A98435B1273B8D54009ED459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98435B5273B8D54009ED459 /* PBXTargetDependency */,
+			);
+			name = XpadIOSClientUITests;
+			productName = GameControllerIOSUITests;
+			productReference = A98435B3273B8D54009ED459 /* XpadIOSClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9843591273B8D53009ED459 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					A9843598273B8D53009ED459 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					A98435A8273B8D54009ED459 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = A9843598273B8D53009ED459;
+					};
+					A98435B2273B8D54009ED459 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = A9843598273B8D53009ED459;
+					};
+				};
+			};
+			buildConfigurationList = A9843594273B8D53009ED459 /* Build configuration list for PBXProject "XpadIOSClient" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9843590273B8D53009ED459;
+			productRefGroup = A984359A273B8D53009ED459 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9843598273B8D53009ED459 /* XpadIOSClient */,
+				A98435A8273B8D54009ED459 /* XpadIOSClientTests */,
+				A98435B2273B8D54009ED459 /* XpadIOSClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9843597273B8D53009ED459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98435A4273B8D54009ED459 /* Preview Assets.xcassets in Resources */,
+				A98435A1273B8D54009ED459 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98435A7273B8D54009ED459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98435B1273B8D54009ED459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65D6FE500B1925FA4D713DAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XpadIOSClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE4C1408D93AB340D28BAB91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XpadIOSClient/Pods-XpadIOSClient-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XpadIOSClient/Pods-XpadIOSClient-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XpadIOSClient/Pods-XpadIOSClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9843595273B8D53009ED459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A984359F273B8D53009ED459 /* ContentView.swift in Sources */,
+				A91DE2DD2740F5F700C5A337 /* steeringView.swift in Sources */,
+				A9F4EEA2273E2E82001AA5F3 /* dpadView.swift in Sources */,
+				A91DE2DB273FA58D00C5A337 /* backgroundTouchableView.swift in Sources */,
+				A984359D273B8D53009ED459 /* XpadIOSClientApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98435A5273B8D54009ED459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98435AE273B8D54009ED459 /* GameControllerIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98435AF273B8D54009ED459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98435BA273B8D54009ED459 /* GameControllerIOSUITestsLaunchTests.swift in Sources */,
+				A98435B8273B8D54009ED459 /* GameControllerIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A98435AB273B8D54009ED459 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9843598273B8D53009ED459 /* XpadIOSClient */;
+			targetProxy = A98435AA273B8D54009ED459 /* PBXContainerItemProxy */;
+		};
+		A98435B5273B8D54009ED459 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9843598273B8D53009ED459 /* XpadIOSClient */;
+			targetProxy = A98435B4273B8D54009ED459 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A98435BB273B8D54009ED459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A98435BC273B8D54009ED459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A98435BE273B8D54009ED459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5029F5C010A9B4B342DFE149 /* Pods-XpadIOSClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XpadIOSClient/Preview Content\"";
+				DEVELOPMENT_TEAM = 8BTHM68B52;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhu.XpadIOSClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A98435BF273B8D54009ED459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FA479CDDB36E16E907D0CC9 /* Pods-XpadIOSClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XpadIOSClient/Preview Content\"";
+				DEVELOPMENT_TEAM = 8BTHM68B52;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhu.XpadIOSClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A98435C1273B8D54009ED459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BTHM68B52;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhu.GameControllerIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XpadIOSClient.app/XpadIOSClient";
+			};
+			name = Debug;
+		};
+		A98435C2273B8D54009ED459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BTHM68B52;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhu.GameControllerIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XpadIOSClient.app/XpadIOSClient";
+			};
+			name = Release;
+		};
+		A98435C4273B8D54009ED459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BTHM68B52;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhu.GameControllerIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameControllerIOS;
+			};
+			name = Debug;
+		};
+		A98435C5273B8D54009ED459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BTHM68B52;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhu.GameControllerIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameControllerIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9843594273B8D53009ED459 /* Build configuration list for PBXProject "XpadIOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98435BB273B8D54009ED459 /* Debug */,
+				A98435BC273B8D54009ED459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98435BD273B8D54009ED459 /* Build configuration list for PBXNativeTarget "XpadIOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98435BE273B8D54009ED459 /* Debug */,
+				A98435BF273B8D54009ED459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98435C0273B8D54009ED459 /* Build configuration list for PBXNativeTarget "XpadIOSClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98435C1273B8D54009ED459 /* Debug */,
+				A98435C2273B8D54009ED459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98435C3273B8D54009ED459 /* Build configuration list for PBXNativeTarget "XpadIOSClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98435C4273B8D54009ED459 /* Debug */,
+				A98435C5273B8D54009ED459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9843591273B8D53009ED459 /* Project object */;
+}
