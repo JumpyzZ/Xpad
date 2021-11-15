@@ -1,6 +1,8 @@
 # Xpad v1.0
 Use iOS devices as game controller for PC via usb-lighting cable.
 
+
+
 ## How to use
 
 ### Prequirments
@@ -29,6 +31,8 @@ Use iOS devices as game controller for PC via usb-lighting cable.
 
 5. Have fun!
 
+
+
 ## Features
 
 - This is a toy I built to play Forza Horizon 4, in order to take advantage of 3D-Touch ability of my iPhoneXS. So accoring to my preference, button is maped as below:
@@ -38,6 +42,10 @@ Use iOS devices as game controller for PC via usb-lighting cable.
   Press right section -> Right Shoulder Button (Gas)
   Steering -> Left Joystick X-axis (Steer)
   ```
+
+- When run PC client for the first time, windows will ask you to give access to network connection, choose allow and re-run `main.py`
+
+  
 
 ## Bugs
 
