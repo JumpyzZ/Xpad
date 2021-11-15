@@ -44,6 +44,7 @@ Use iOS devices as game controller for PC via usb-lighting cable.
 - iOS client will crash if cable is unplugged when connected and running.
 - Must follow exact order 1-4 to connect iOS client to PC.
 - When device is rotated, steer will not rotate, so don't do that.
+- Not sure what will happen if device don't support 3D-Touch.
 
 ## Thanks to
 
