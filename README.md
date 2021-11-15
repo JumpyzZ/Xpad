@@ -16,6 +16,8 @@ Use iOS devices as game controller for PC via usb-lighting cable.
 
 2. Run XpadIOSClient on your device, click "Start Listen".
 
+   ![IMG_4893](./IMG_4893.PNG)
+
 3. Run PC client, create a virtual controller using vgamepad and send connect request to device.
 
    ```
