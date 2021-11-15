@@ -14,7 +14,6 @@ struct backgroundTouchableView: View {
             leftTouchableViewContainer()
             rightTouchableViewContainer()
         }
-        
     }
 }
 
