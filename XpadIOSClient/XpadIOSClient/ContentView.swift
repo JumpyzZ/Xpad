@@ -13,6 +13,7 @@ import CoreMotion
 struct ContentView: View {
     @State var isListening = false
     @State var isConnected = false
+    @State var i = 0
     
     @EnvironmentObject var stdata: steeringData
     var body: some View {
@@ -23,6 +24,45 @@ struct ContentView: View {
                 dpadView()
                 VStack{
                     HStack {
+                        /*
+                        Button(action: {
+                            i += 1
+                            print("Running \(i)")
+
+                            switch i {
+                            case 1:
+                                let generator = UINotificationFeedbackGenerator()
+                                generator.notificationOccurred(.error)
+
+                            case 2:
+                                let generator = UINotificationFeedbackGenerator()
+                                generator.notificationOccurred(.success)
+
+                            case 3:
+                                let generator = UINotificationFeedbackGenerator()
+                                generator.notificationOccurred(.warning)
+
+                            case 4:
+                                let generator = UIImpactFeedbackGenerator(style: .light)
+                                generator.impactOccurred()
+
+                            case 5:
+                                let generator = UIImpactFeedbackGenerator(style: .medium)
+                                generator.impactOccurred()
+
+                            case 6:
+                                let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                generator.impactOccurred()
+
+                            default:
+                                let generator = UISelectionFeedbackGenerator()
+                                generator.selectionChanged()
+                                i = 0
+                            }
+                        }) {
+                            Text("Tap test")
+                        }
+                        */
                         Button(action: {
                             if !(isListening || isConnected){
                                 let s = globalObj.socket

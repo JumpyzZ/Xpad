@@ -49,6 +49,7 @@ class steeringData: ObservableObject{
     @Published var limit: CGFloat
     @Published var tiltTrim: CGFloat
     @Published var deadZone: CGFloat
+    var tiltBuffer = [CGFloat](repeating: 0.0, count: 3)
     
     
     
@@ -78,6 +79,29 @@ class steeringData: ObservableObject{
         if globalObj.socket.isConnected{
             let tiltPercentToSend = abs(self.tiltTrim)>self.deadZone ? self.tiltPercent : 0.0
             try! globalObj.socket.write(from: "<Str>\(tiltPercentToSend)</Str>")
+        }
+        
+        
+        tiltBuffer[2] = tiltBuffer[1]
+        tiltBuffer[1] = tiltBuffer[0]
+        tiltBuffer[0] = tiltPercent
+        
+        for tick in -10...10{
+            if tick%2 == 0{
+                continue
+            }
+            let float_tick = CGFloat(tick)/10
+            //print("\(tiltBuffer),\(float_tick)")
+            if (tiltBuffer[2]<float_tick && float_tick<tiltBuffer[0]) || (tiltBuffer[0]<float_tick && float_tick<tiltBuffer[2]){
+                let generator = UIImpactFeedbackGenerator(style: .medium)
+                generator.impactOccurred()
+                //print(float_tick)
+            }
+        }
+        
+        if abs(tiltTrim)==limit{
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
         }
     }
 }
