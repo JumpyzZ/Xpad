@@ -56,7 +56,7 @@ class steeringData: ObservableObject{
         self.tilt = 0.0
         // tiltPercent is only used to let PC client know what value to set.
         self.tiltPercent = 0.0
-        self.limit = 1.05
+        self.limit = 0.8
         self.tiltTrim = 0.0
         self.deadZone = 0.01
         self.manager = CMMotionManager()
@@ -69,13 +69,15 @@ class steeringData: ObservableObject{
     func getMotionData(deviceMotion: CMDeviceMotion) {
         let xzComponent = sqrt(pow(deviceMotion.gravity.x, 2) + pow(deviceMotion.gravity.z, 2))
         let tilt = atan2(deviceMotion.gravity.y, xzComponent)
+        
         self.tilt = tilt
         let limit = self.limit
         self.tiltTrim = (abs(tilt)>limit ? (tilt<0 ? -1 : 1)*limit : tilt)
         self.tiltPercent = self.tiltTrim / self.limit
+        
         if globalObj.socket.isConnected{
             let tiltPercentToSend = abs(self.tiltTrim)>self.deadZone ? self.tiltPercent : 0.0
             try! globalObj.socket.write(from: "<Str>\(tiltPercentToSend)</Str>")
         }
-        }
+    }
 }

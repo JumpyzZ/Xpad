@@ -26,8 +26,8 @@ struct steeringView: View {
                 .font(.system(size: 250))
                 .clipShape(
                     Rectangle()
-                        .size(width: 35, height: 60)
-                        .offset(x: 129.7, y: 0)
+                        .size(width: 13, height: 60)
+                        .offset(x: 141.5, y: 0)
                 )
                 .rotationEffect(.radians(tiltTrim))
         }.offset(x: 0, y: -30)
@@ -36,7 +36,7 @@ struct steeringView: View {
 
 struct steeringView_Previews: PreviewProvider {
     static var previews: some View {
-        steeringView(tiltTrim: 1.05, limit: 1.05, deadZone: 0.01)
+        steeringView(tiltTrim: 0, limit: 0.8, deadZone: 0.01)
 .previewInterfaceOrientation(.landscapeLeft)
     }
 }
