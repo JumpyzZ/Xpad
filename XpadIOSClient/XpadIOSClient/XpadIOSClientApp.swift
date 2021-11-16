@@ -18,11 +18,14 @@ struct XpadIOSClientApp: App {
             //backgroundTouchableView()
             //dpadView()
             ContentView()
+                //Start collecting gravity data, process to steer data and send to PC client via socket, then pass to view to draw steer visual.
                 .environmentObject(steeringData())
         }
     }
 }
 var globalObj = globalObject()
+
+
 
 class globalObject: ObservableObject {
     @Published var socket: Socket
@@ -34,20 +37,28 @@ class globalObject: ObservableObject {
     }
 }
 
+
+
+
+
+
 class steeringData: ObservableObject{
     @Published var manager: CMMotionManager
     @Published var tilt: CGFloat
     @Published var tiltPercent: CGFloat
     @Published var limit: CGFloat
     @Published var tiltTrim: CGFloat
+    @Published var deadZone: CGFloat
     
     
     
     init(){
         self.tilt = 0.0
+        // tiltPercent is only used to let PC client know what value to set.
         self.tiltPercent = 0.0
         self.limit = 1.05
         self.tiltTrim = 0.0
+        self.deadZone = 0.01
         self.manager = CMMotionManager()
         self.manager.deviceMotionUpdateInterval = 0.01
         self.manager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
@@ -63,7 +74,8 @@ class steeringData: ObservableObject{
         self.tiltTrim = (abs(tilt)>limit ? (tilt<0 ? -1 : 1)*limit : tilt)
         self.tiltPercent = self.tiltTrim / self.limit
         if globalObj.socket.isConnected{
-            try! globalObj.socket.write(from: "<Str>\(self.tiltPercent)</Str>")
+            let tiltPercentToSend = abs(self.tiltTrim)>self.deadZone ? self.tiltPercent : 0.0
+            try! globalObj.socket.write(from: "<Str>\(tiltPercentToSend)</Str>")
         }
         }
 }

@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct steeringView: View {
-    var tilt: CGFloat
+    var tiltTrim: CGFloat
     var limit: CGFloat
+    var deadZone: CGFloat
+
     var body: some View {
         ZStack{
             Text("\(Image(systemName: "circle"))")
@@ -20,21 +22,21 @@ struct steeringView: View {
                 )
                 .opacity(0.3)
             Text("\(Image(systemName: "circle"))")
-                .foregroundColor((abs(tilt)<limit ? Color.mint : Color.orange))
+                .foregroundColor(abs(tiltTrim)<deadZone ? Color.black.opacity(0.1) : abs(tiltTrim)<limit ? Color.mint:Color.orange)
                 .font(.system(size: 250))
                 .clipShape(
                     Rectangle()
                         .size(width: 35, height: 60)
                         .offset(x: 129.7, y: 0)
                 )
-                .rotationEffect(.radians(tilt))
+                .rotationEffect(.radians(tiltTrim))
         }.offset(x: 0, y: -30)
     }
 }
 
 struct steeringView_Previews: PreviewProvider {
     static var previews: some View {
-        steeringView(tilt: 1.05, limit: 1.05)
+        steeringView(tiltTrim: 1.05, limit: 1.05, deadZone: 0.01)
 .previewInterfaceOrientation(.landscapeLeft)
     }
 }

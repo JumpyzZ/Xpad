@@ -17,9 +17,8 @@ struct ContentView: View {
     @EnvironmentObject var stdata: steeringData
     var body: some View {
         VStack{
-            
             ZStack{
-                steeringView(tilt: stdata.tiltTrim, limit:stdata.limit)
+                steeringView(tiltTrim: stdata.tiltTrim, limit:stdata.limit, deadZone: stdata.deadZone)
                 backgroundTouchableView()
                 dpadView()
                 VStack{
