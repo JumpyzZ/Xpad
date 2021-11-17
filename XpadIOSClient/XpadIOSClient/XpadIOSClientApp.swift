@@ -57,9 +57,9 @@ class steeringData: ObservableObject{
         self.tilt = 0.0
         // tiltPercent is only used to let PC client know what value to set.
         self.tiltPercent = 0.0
-        self.limit = 0.8
+        self.limit = 0.5
         self.tiltTrim = 0.0
-        self.deadZone = 0.01
+        self.deadZone = 0.06
         self.manager = CMMotionManager()
         self.manager.deviceMotionUpdateInterval = 0.01
         self.manager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
@@ -86,17 +86,25 @@ class steeringData: ObservableObject{
         tiltBuffer[1] = tiltBuffer[0]
         tiltBuffer[0] = tiltPercent
         
-        for tick in -10...10{
+        /*
+        for tick in -30...30{
+            /*
             if tick%2 == 0{
                 continue
             }
-            let float_tick = CGFloat(tick)/10
+             */
+            let float_tick = CGFloat(tick)/30
             //print("\(tiltBuffer),\(float_tick)")
             if (tiltBuffer[2]<float_tick && float_tick<tiltBuffer[0]) || (tiltBuffer[0]<float_tick && float_tick<tiltBuffer[2]){
-                let generator = UIImpactFeedbackGenerator(style: .medium)
-                generator.impactOccurred()
+                let generator = UISelectionFeedbackGenerator()
+                generator.selectionChanged()
                 //print(float_tick)
             }
+        }
+        */
+        if(tiltBuffer[2]<0 && 0<tiltBuffer[0]) || (tiltBuffer[0]<0 && 0<tiltBuffer[2]){
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
         }
         
         if abs(tiltTrim)==limit{

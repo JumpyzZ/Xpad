@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct buttonAView: View {
     @State var pressed = false
@@ -17,6 +18,8 @@ struct buttonAView: View {
                                 .onChanged({ _ in
                                     print("A Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<A>Press</A>")
                                     }
@@ -42,6 +45,8 @@ struct buttonBView: View {
                                 .onChanged({ _ in
                                     print("B Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<B>Press</B>")
                                     }
@@ -68,6 +73,8 @@ struct buttonXView: View {
                                 .onChanged({ _ in
                                     print("X Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<X>Press</X>")
                                     }
@@ -94,6 +101,8 @@ struct buttonYView: View {
                                 .onChanged({ _ in
                                     print("Y Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Y>Press</Y>")
                                     }
@@ -120,6 +129,8 @@ struct dpadUpTouchView: View {
                                 .onChanged({ _ in
                                     print("dpad Up Pressed")
                                     dpadUp = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Up>Press</Up>")
                                     }
@@ -146,6 +157,8 @@ struct dpadDownTouchView: View {
                                 .onChanged({ _ in
                                     print("dpad Down Pressed")
                                     dpadDown = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Down>Press</Down>")
                                     }
@@ -172,6 +185,8 @@ struct dpadLeftTouchView: View {
                                 .onChanged({ _ in
                                     print("dpad Left Pressed")
                                     dpadLeft = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Left>Press</Left>")
                                     }
@@ -198,6 +213,8 @@ struct dpadRightTouchView: View {
                                 .onChanged({ _ in
                                     print("dpad Right Pressed")
                                     dpadRight = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Right>Press</Right>")
                                     }
@@ -223,6 +240,8 @@ struct buttonBackView: View {
                                 .onChanged({ _ in
                                     print("Back Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Back>Press</Back>")
                                     }
@@ -248,6 +267,8 @@ struct buttonStartView: View {
                                 .onChanged({ _ in
                                     print("Start Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Start>Press</Start>")
                                     }
@@ -273,6 +294,8 @@ struct buttonLBView: View {
                                 .onChanged({ _ in
                                     print("LB Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<LB>Press</LB>")
                                     }
@@ -298,6 +321,8 @@ struct buttonRBView: View {
                                 .onChanged({ _ in
                                     print("RB Pressed")
                                     pressed = true
+                                    let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                    generator.impactOccurred()
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<RB>Press</RB>")
                                     }
