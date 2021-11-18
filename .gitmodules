@@ -1,0 +1,3 @@
+[submodule "XpadPCClient/lib/vgamepad"]
+	path = XpadPCClient/lib/vgamepad
+	url = https://github.com/yannbouteiller/vgamepad.git

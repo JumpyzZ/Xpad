@@ -8,6 +8,8 @@ import time
 import subprocess
 import sys
 import re
+
+sys.path.insert(0, './lib/vgamepad')
 import vgamepad as vg
 
 Commands = [
@@ -122,13 +124,13 @@ def sendCommandtoController(cmdDict, controller):
 
 if __name__ == '__main__':
     gamepad = vg.VX360Gamepad()
+    gamepad.register_callback()
     localPort = 23399
     remotePort = 5050
 
     cmd = "python tcprelay.py {rp}:{lp}".format(rp=remotePort, lp=localPort)
     #cmd = "tidevice relay -x {lp} {rp}".format(rp=remotePort, lp=localPort)
     p = subprocess.Popen(cmd, shell=True)
-    time.sleep(1)
 
     s = socket.socket()
     host = socket.gethostname()

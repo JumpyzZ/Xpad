@@ -137,7 +137,6 @@ class PlistProtocol(BinaryProtocol):
 			req = [self.TYPE_CONNECT, self.TYPE_LISTEN][req-2]
 		payload['MessageType'] = req
 		payload['ProgName'] = 'tcprelay'
-		print(plistlib.dumps(payload))
 		#BinaryProtocol.sendpacket(self, self.TYPE_PLIST, tag, plistlib.writePlistToString(payload))
 		BinaryProtocol.sendpacket(self, self.TYPE_PLIST, tag, plistlib.dumps(payload))
 	def getpacket(self):
@@ -146,7 +145,6 @@ class PlistProtocol(BinaryProtocol):
 			raise MuxError("Received non-plist type %d"%resp)
 		#payload = plistlib.readPlistFromString(payload)
 		payload = plistlib.loads(payload)
-		print(payload)
 		return payload['MessageType'], tag, payload
 
 class MuxConnection(object):
