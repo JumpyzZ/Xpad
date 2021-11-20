@@ -7,8 +7,17 @@ Use iOS devices as game controller for PC via usb-lighting cable.
 
 ### Prequirments
 
-- Download all files of this project.
+- Clone this repository into your pc and update submodule.
+
+  ```
+  git clone https://github.com/JumpyzZ/Xpad.git
+  cd /Xpad
+  git init submodule
+  git submodule update
+  ```
+
 - [iOS] Open /Xpad/XpadIOSClient/XpadIOSClient.xcworkspace using Xcode, connect your device and build XpadIOSClient on it.
+
 - [PC] Install iTunes, inorder to install `usbmuxd`  service for providing TCP connection over USB pipe.
 
 ### When ready
