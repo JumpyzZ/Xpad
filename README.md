@@ -14,6 +14,10 @@ Use iOS devices as game controller for PC via usb-lighting cable.
   cd /Xpad
   git init submodule
   git submodule update
+  
+  cd /Xpad/XpadPCClient/lib/vgamepad
+  git checkout main
+  git pull
   ```
 
 - [iOS] Open /Xpad/XpadIOSClient/XpadIOSClient.xcworkspace using Xcode, connect your device and build XpadIOSClient on it.
