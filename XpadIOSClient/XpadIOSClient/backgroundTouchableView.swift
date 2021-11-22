@@ -49,7 +49,7 @@ class leftTouchableView: UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Left section pressed")
+        //print("Left section pressed")
         for touch in touches {
             createViewForTouch(touch: touch)
         }
@@ -71,7 +71,7 @@ class leftTouchableView: UIView {
    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Left section released")
+        //print("Left section released")
         for touch in touches {
             removeViewForTouch(touch: touch)
         }
@@ -126,7 +126,7 @@ class rightTouchableView: UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Right section pressed")
+        //print("Right section pressed")
         for touch in touches {
             createViewForTouch(touch: touch)
         }
@@ -148,7 +148,7 @@ class rightTouchableView: UIView {
    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Right section released")
+        //print("Right section released")
         for touch in touches {
             removeViewForTouch(touch: touch)
         }

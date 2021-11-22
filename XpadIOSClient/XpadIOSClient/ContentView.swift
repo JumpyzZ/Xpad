@@ -24,76 +24,35 @@ struct ContentView: View {
                 dpadView()
                 VStack{
                     HStack {
-                        /*
-                        Button(action: {
-                            i += 1
-                            print("Running \(i)")
-
-                            switch i {
-                            case 1:
-                                let generator = UINotificationFeedbackGenerator()
-                                generator.notificationOccurred(.error)
-
-                            case 2:
-                                let generator = UINotificationFeedbackGenerator()
-                                generator.notificationOccurred(.success)
-
-                            case 3:
-                                let generator = UINotificationFeedbackGenerator()
-                                generator.notificationOccurred(.warning)
-
-                            case 4:
-                                let generator = UIImpactFeedbackGenerator(style: .light)
-                                generator.impactOccurred()
-
-                            case 5:
-                                let generator = UIImpactFeedbackGenerator(style: .medium)
-                                generator.impactOccurred()
-
-                            case 6:
-                                let generator = UIImpactFeedbackGenerator(style: .heavy)
-                                generator.impactOccurred()
-
-                            default:
-                                let generator = UISelectionFeedbackGenerator()
-                                generator.selectionChanged()
-                                i = 0
-                            }
-                        }) {
-                            Text("Tap test")
-                        }
-                        */
-                        Button(action: {
+                        Button("Start Listen"){
                             if !(isListening || isConnected){
                                 let s = globalObj.socket
                                 try! s.listen(on: 5050)
                                 isListening = s.isListening
                                 isConnected = s.isConnected
                             }
-                        }) {
-                            Text("Start Listen")
                         }
-                        Button(action: {
-                            if isListening && !isConnected{
-                                let s = globalObj.socket
-                                try! s.acceptConnection()
-                                isListening = s.isListening
-                                isConnected = s.isConnected
+                        Button("Accept Connection"){
+                            DispatchQueue.global().async {
+                                if self.isListening && !self.isConnected{
+                                    let s = globalObj.socket
+                                    try! s.acceptConnection()
+                                    DispatchQueue.main.async {
+                                        self.isListening = s.isListening
+                                        self.isConnected = s.isConnected
+                                    }
+                                }
                             }
-                        }) {
-                            Text("Accept connection")
                         }
-                        Button(action: {
+                        Button("Close Connection"){
                             if isConnected{
                                 let s = globalObj.socket
                                 try! s.write(from: "<SIG>Close Connection</SIG>")
                                 s.close()
-                                isListening = s.isListening
-                                isConnected = s.isConnected
                                 globalObj.socket = try! Socket.create()
+                                isListening = globalObj.socket.isListening
+                                isConnected = globalObj.socket.isConnected
                             }
-                        }) {
-                            Text("Close Connection")
                         }
                         HStack{
                             if !(isListening || isConnected){

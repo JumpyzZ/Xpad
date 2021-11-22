@@ -16,7 +16,7 @@ struct buttonAView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("A Pressed")
+                                    //print("A Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -25,7 +25,7 @@ struct buttonAView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("A Released")
+                                    //print("A Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<A>Release</A>")
@@ -43,7 +43,7 @@ struct buttonBView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("B Pressed")
+                                    //print("B Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -53,7 +53,7 @@ struct buttonBView: View {
                                     
                                 })
                                 .onEnded({ _ in
-                                    print("B Released")
+                                    //print("B Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<B>Release</B>")
@@ -71,7 +71,7 @@ struct buttonXView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("X Pressed")
+                                    //print("X Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -81,7 +81,7 @@ struct buttonXView: View {
                                     
                                 })
                                 .onEnded({ _ in
-                                    print("X Released")
+                                    //print("X Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<X>Release</X>")
@@ -99,7 +99,7 @@ struct buttonYView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("Y Pressed")
+                                    //print("Y Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -108,7 +108,7 @@ struct buttonYView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("Y Released")
+                                    //print("Y Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Y>Release</Y>")
@@ -127,7 +127,7 @@ struct dpadUpTouchView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("dpad Up Pressed")
+                                    //print("dpad Up Pressed")
                                     dpadUp = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -136,7 +136,7 @@ struct dpadUpTouchView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("dpad Up Released")
+                                    //print("dpad Up Released")
                                     dpadUp = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Up>Release</Up>")
@@ -155,7 +155,7 @@ struct dpadDownTouchView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("dpad Down Pressed")
+                                    //print("dpad Down Pressed")
                                     dpadDown = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -164,7 +164,7 @@ struct dpadDownTouchView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("dpad Down Released")
+                                    //print("dpad Down Released")
                                     dpadDown = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Down>Release</Down>")
@@ -183,7 +183,7 @@ struct dpadLeftTouchView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("dpad Left Pressed")
+                                    //print("dpad Left Pressed")
                                     dpadLeft = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -192,7 +192,7 @@ struct dpadLeftTouchView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("dpad Left Released")
+                                    //print("dpad Left Released")
                                     dpadLeft = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Left>Release</Left>")
@@ -211,7 +211,7 @@ struct dpadRightTouchView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("dpad Right Pressed")
+                                    //print("dpad Right Pressed")
                                     dpadRight = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -220,7 +220,7 @@ struct dpadRightTouchView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("dpad Right Released")
+                                    //print("dpad Right Released")
                                     dpadRight = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Right>Release</Right>")
@@ -238,7 +238,7 @@ struct buttonBackView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("Back Pressed")
+                                    //print("Back Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -247,7 +247,7 @@ struct buttonBackView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("Back Released")
+                                    //print("Back Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Back>Release</Back>")
@@ -265,7 +265,7 @@ struct buttonStartView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("Start Pressed")
+                                    //print("Start Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -274,7 +274,7 @@ struct buttonStartView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("Start Released")
+                                    //print("Start Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<Start>Release</Start>")
@@ -292,7 +292,7 @@ struct buttonLBView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("LB Pressed")
+                                    //print("LB Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -301,7 +301,7 @@ struct buttonLBView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("LB Released")
+                                    //print("LB Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<LB>Release</LB>")
@@ -319,7 +319,7 @@ struct buttonRBView: View {
             .simultaneousGesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged({ _ in
-                                    print("RB Pressed")
+                                    //print("RB Pressed")
                                     pressed = true
                                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                                     generator.impactOccurred()
@@ -328,7 +328,7 @@ struct buttonRBView: View {
                                     }
                                 })
                                 .onEnded({ _ in
-                                    print("RB Released")
+                                    //print("RB Released")
                                     pressed = false
                                     if globalObj.socket.isConnected{
                                         try! globalObj.socket.write(from: "<RB>Release</RB>")
